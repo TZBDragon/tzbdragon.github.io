@@ -20,7 +20,33 @@
     <h1>DO NOT CLICK ON HYPERLINKS NO MATTER WHO SENDS THEM</h1>
     <a href="https://tzbdragon.github.io/images">If pop-ups were disabled good job Click Here</a>
     <p> Please and thank you</p>
-    
+    <div id="player"></div>
+    <script>
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player;
+      function oniFrameReady(){
+        player = new YT.Player('player', {
+          height : 800,
+          width : 1200,
+          videoId : 'dQw4w9WgXcQ',
+          playerVars: {
+
+          },
+          events: {
+            'onReady': onPlayerReady
+          }
+        })
+      }
+      player.mute();
+      function onPlayerReady(event){
+        event.target.playVideo();
+      }
+
+    </script>
     <iframe width="1200" height="800" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2jI6HdLZIaSaJ12S&autoplay=1&mute=1" allow="autoplay"></iframe>
     
   </body>
