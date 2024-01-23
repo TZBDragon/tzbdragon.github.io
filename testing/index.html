@@ -3,29 +3,20 @@
   <head>
     <title>My first subpage</title>
   </head>
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script>
-  jQuery(document).ready(function () {
-  newTab();
-  });
-
-function newTab() {
- var form = document.createElement("form");
- form.method = "GET";
- form.action = "http://tzbdragon.github.io/images";
- form.target = "_blank";
- document.body.appendChild(form);
- form.submit();
+    function OpenInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
 }
 </script>
-  <body style="background-color: rgb(22, 21, 21);">
+  <body style="background-color: rgb(22, 21, 21);" onload=OpenInNewTab('https://tzbdragon.github.io/images')>
     <a class="my-link">Hello</a>
     <style>
       h1 {text-align: center; color: rgb(235, 225, 225);}
       p {text-align: center; color: rgb(235, 225, 225);}
     </style>
-    <h1>DO NOt CLICK ON HEYPERLINKS NO MATTER WHO SENDS THEM</h1>
+    <h1>DO NOT CLICK ON HYPERLINKS NO MATTER WHO SENDS THEM</h1>0
     <p> Please and thank you</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=FZAiV6SG4GkjAPOs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="1080" height="1920" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=FZAiV6SG4GkjAPOs?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </body>
 </html>
