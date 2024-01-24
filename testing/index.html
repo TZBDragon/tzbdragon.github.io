@@ -19,7 +19,7 @@
     </style>
     <h1>DO NOT CLICK ON HYPERLINKS NO MATTER WHO SENDS THEM</h1>
     <a href="https://tzbdragon.github.io/images">If pop-ups were disabled good job Click Here</a>
-    <p> Please and thank you</p>
+    <p> Or copy and paste this link https://tzbdragon.github.io/images</p>
     <div id="player"></div>
     <script>
       var tag = document.createElement('script');
@@ -41,11 +41,15 @@
           }
         })
       }
-      player.mute();
       function onPlayerReady(event){
         event.target.playVideo();
       }
-      player.unMute();
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+          player.unMute();
+        }
+      }
+
     </script>
     <iframe width="1200" height="800" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2jI6HdLZIaSaJ12S&autoplay=1&mute=1" allow="autoplay"></iframe>
   </body>
