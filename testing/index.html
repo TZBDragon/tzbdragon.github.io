@@ -9,7 +9,7 @@
   win.focus();
 }
 </script>
-  <body style="background-color: rgb(22, 21, 21);" onload=OpenInNewTab('https://tzbdragon.github.io/images')>
+  <body style="background-color: rgb(22, 21, 21);">
     
     <style>
       h1 {text-align: center; color: rgb(235, 225, 225);}
@@ -45,7 +45,7 @@
         event.target.playVideo();
       }
       function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING) {
+        if (player.getPlayerState() == 1) {
           player.unMute();
         }
       }
